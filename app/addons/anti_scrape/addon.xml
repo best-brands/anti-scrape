@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<addon scheme="4.0">
+    <id>anti_scrape</id>
+    <name>Anti scrape</name>
+    <description>Blocks popular scrapers like selenium automatically</description>
+    <version>1.0</version>
+    <priority>2300</priority>
+    <position>0</position>
+    <status>disabled</status>
+    <supplier>HarmSmits</supplier>
+    <supplier_link>https://github.com/harm-smits</supplier_link>
+    <default_language>en</default_language>
+
+    <authors>
+        <author>
+            <name>Harm Smits</name>
+            <email>harmsmitsdev@gmail.com</email>
+            <phone>+31625500655</phone>
+        </author>
+    </authors>
+
+    <autoload>
+        <psr4 prefix="Tygh\Addons\AntiScrape\">src</psr4>
+    </autoload>
+
+    <bootstrap>\Tygh\Addons\AntiScrape\Bootstrap</bootstrap>
+
+    <queries>
+        <item for="install">
+            CREATE TABLE IF NOT EXISTS `?:scrapers` (
+                `ip_address` varbinary(64),
+                `user_agent` varchar(128),
+                `timestamp` int(11),
+                `attempts` int(11),
+                PRIMARY KEY (`ip_address`)
+            ) Engine=InnoDB DEFAULT CHARSET UTF8;
+        </item>
+    </queries>
+</addon>
