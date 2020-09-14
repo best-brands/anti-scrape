@@ -8,13 +8,13 @@
     <position>0</position>
     <status>disabled</status>
     <supplier>HarmSmits</supplier>
-    <supplier_link>https://github.com/harm-smits</supplier_link>
+    <supplier_link>https://github.com/best-brands</supplier_link>
     <default_language>en</default_language>
 
     <authors>
         <author>
             <name>Harm Smits</name>
-            <email>harmsmitsdev@gmail.com</email>
+            <email>harm@bestbrands.eu</email>
             <phone>+31625500655</phone>
         </author>
     </authors>
