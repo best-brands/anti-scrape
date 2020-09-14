@@ -8,6 +8,6 @@ You can use this smarty template anywhere you like to output specific things (li
 
 ```smarty
 {if $webcrawler_verification_status !== 1}
-    <script type="application/json+;d"></script>
+    <script type="application/json+ld"></script>
 {/if}
 ```
